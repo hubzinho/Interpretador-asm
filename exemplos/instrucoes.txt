@@ -1,4 +1,4 @@
-10A2
-2FF0
-30B1
-4ABC
+1005 ; LOAD 0x005 A = 5
+2007 ; ADD  0x003 A = 8
+3002 ; SUB  0x002 A = 6
+4000 ; PRINT      Imprime "Valor de A: 6"
