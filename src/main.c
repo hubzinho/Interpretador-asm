@@ -6,7 +6,7 @@ extern void executar_instrucao(int instrucao);
 
 // Lê instruções de um arquivo HEX e envia para o interpretador
 int main() {
-    FILE* arquivo = fopen("instrucoes.txt", "r");
+    FILE* arquivo = fopen("instrucoes.txt", "r"); // Abre o arquivo .txt
     if (!arquivo) {
         perror("Erro ao abrir o arquivo");
         return 1;
@@ -14,11 +14,11 @@ int main() {
 
     char linha[10];
     while (fgets(linha, sizeof(linha), arquivo)) {
-        int instrucao = (int)strtol(linha, NULL, 16);
-        executar_instrucao(instrucao);
+        int instrucao = (int)strtol(linha, NULL, 16); // converte a string para um numero inteiro
+        executar_instrucao(instrucao); // passa a instrucao convertida
     }
 
-    fclose(arquivo);
+    fclose(arquivo); // fecha o arquivo .txt
     return 0;
 }
 
